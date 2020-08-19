@@ -1,0 +1,29 @@
+// 将重复的样式设置 封装为函数
+cleanDefaultStyle()
+  appearance: none
+  border: none
+  outline: none
+
+btn(c, boder = false)
+  padding: 0 10px
+  border-radius: 5px
+  cursor: pointer
+  margin: 0px 5px
+  cleanDefaultStyle()
+
+  if (boder == true)
+    border: 1px solid c
+  else
+    background-color: c
+    color: white
+
+@import '~styles/theme.styl'
+
+primaryBtn()
+  btn($lightred)
+
+primaryBorderBtn()
+  btn($lightred, true)
+
+infoBtn()
+  btn($lightgreen)
